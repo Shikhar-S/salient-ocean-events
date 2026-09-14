@@ -1,0 +1,26 @@
+[project]
+name = "eventdetection"
+version = "0.1.0"
+description = "Benchmark of label-free salient bioacoustic event detection methods"
+requires-python = ">=3.12"
+dependencies = [
+    "datasets<=3.6.0",
+    "librosa>=0.11.0",
+    "numpy>=2.4.6",
+    "scikit-maad>=1.5.2",
+    "scipy>=1.17.1",
+    "soundfile>=0.14.0",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=9.0.3",
+]
+
+# uv caches wheels in ~/.cache/uv by default. On a cluster where $HOME has a small
+# quota, point it at scratch instead by exporting an absolute path before running:
+#     export UV_CACHE_DIR=/path/to/scratch/.uv-cache
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]

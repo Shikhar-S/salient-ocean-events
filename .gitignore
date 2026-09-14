@@ -1,0 +1,32 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+
+# uv cache (redirected here from ~/.cache/uv via tool.uv.cache-dir)
+.uv-cache
+
+# SLURM job logs and benchmark / provenance outputs (root-anchored so they don't
+# also match source dirs like src/eval/)
+/logs/
+/results/
+
+# prepared eval clip datasets (data/<corpus>/ are HuggingFace upload units) + bench outputs
+/data/
+/eval/
+
+# raw corpus downloads (HuggingFace dumps, e.g. BirdSet soundscapes) — large, never committed
+/download/
+
+# agent git worktrees
+/.claude/worktrees/
+
+# local-only: agent guidance + paper source, not part of the public release
+CLAUDE.md
+paper.tex
